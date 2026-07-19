@@ -1,0 +1,49 @@
+name: Design Task
+description: Define or refine product design before implementation.
+title: "[Design]: "
+labels:
+  - design
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this when ChatGPT needs to define player-facing rules, acceptance criteria, reference interpretation, or design QA.
+  - type: dropdown
+    id: marker
+    attributes:
+      label: Status marker
+      options:
+        - PO DECISION
+        - DESIGN — ChatGPT
+        - READY FOR CODEX
+        - BLOCKED
+    validations:
+      required: true
+  - type: textarea
+    id: question
+    attributes:
+      label: Design question
+      description: What needs to be decided or specified?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Include relevant North Star, backlog, reference-game, or playtest context.
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Required output
+      description: What document, rule, spec, or QA checklist should result?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: What makes this design task complete?
+    validations:
+      required: true

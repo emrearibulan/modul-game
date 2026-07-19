@@ -1,0 +1,46 @@
+name: Playtest Finding
+description: Capture observations from playtests and design QA.
+title: "[Playtest]: "
+labels:
+  - playtest
+body:
+  - type: dropdown
+    id: marker
+    attributes:
+      label: Status marker
+      options:
+        - PO DECISION
+        - DESIGN — ChatGPT
+        - DEVELOPMENT — Codex
+        - READY FOR CODEX
+        - BLOCKED
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: Observation
+      description: What did the player do, say, or misunderstand?
+    validations:
+      required: true
+  - type: textarea
+    id: interpretation
+    attributes:
+      label: Interpretation
+      description: What does the finding suggest?
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Include build, session, timestamp, notes, or media.
+    validations:
+      required: true
+  - type: textarea
+    id: follow_up
+    attributes:
+      label: Proposed follow-up
+      description: What design, development, or PO action should happen next?
+    validations:
+      required: true

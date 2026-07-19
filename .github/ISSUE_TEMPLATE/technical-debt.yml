@@ -1,0 +1,44 @@
+name: Technical Debt
+description: Track technical risk, cleanup, or architecture work.
+title: "[Tech Debt]: "
+labels:
+  - technical-debt
+body:
+  - type: dropdown
+    id: marker
+    attributes:
+      label: Status marker
+      options:
+        - DEVELOPMENT — Codex
+        - READY FOR CODEX
+        - BLOCKED
+    validations:
+      required: true
+  - type: textarea
+    id: debt
+    attributes:
+      label: Debt or risk
+      description: What is the technical concern?
+    validations:
+      required: true
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: What could break, slow down, or become harder?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed approach
+      description: How should Codex address it?
+    validations:
+      required: true
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation
+      description: What tests or checks prove the debt is addressed?
+    validations:
+      required: true
