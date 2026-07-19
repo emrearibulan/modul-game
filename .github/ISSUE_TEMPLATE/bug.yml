@@ -1,0 +1,55 @@
+name: Bug
+description: Report incorrect, broken, or confusing behavior.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: dropdown
+    id: marker
+    attributes:
+      label: Status marker
+      options:
+        - PO DECISION
+        - DESIGN — ChatGPT
+        - DEVELOPMENT — Codex
+        - READY FOR CODEX
+        - BLOCKED
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened?
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction steps
+      description: Include build, branch, platform, and exact steps.
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Screenshots, logs, saves, design implications, or suspected cause.

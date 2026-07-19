@@ -1,0 +1,53 @@
+name: Feature
+description: Propose player-facing or technical feature work.
+title: "[Feature]: "
+labels:
+  - feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this for scoped feature work. Player-facing features need DESIGN — ChatGPT acceptance criteria before they are READY FOR CODEX.
+  - type: dropdown
+    id: marker
+    attributes:
+      label: Status marker
+      options:
+        - PO DECISION
+        - DESIGN — ChatGPT
+        - DEVELOPMENT — Codex
+        - READY FOR CODEX
+        - BLOCKED
+    validations:
+      required: true
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What should change?
+    validations:
+      required: true
+  - type: textarea
+    id: player_value
+    attributes:
+      label: Player value
+      description: What player-facing value or project value does this create?
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: List observable outcomes needed for completion.
+    validations:
+      required: true
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies or blockers
+      description: Include PO decisions, design specs, technical dependencies, or assets needed.
+  - type: textarea
+    id: validation
+    attributes:
+      label: Validation plan
+      description: How should this be tested or design-QA'd?
